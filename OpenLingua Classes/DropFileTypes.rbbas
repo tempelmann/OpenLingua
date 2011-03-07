@@ -1,1 +1,1 @@
-#tag FileTypeSet	#tag FileType		CodeName=LinguaFile		Extension=.rbl		Flags=&h9		MacCreator=RbLc		MacType=Lngu		Name=Lingua File	#tag EndFileType#tag EndFileTypeSet
+#tag FileTypeSet	#tag FileType		CodeName=LinguaFile		Extension=.rbl		Flags=&h5		MacCreator=OLgu		MacType=RbLc		Name=REALbasic Locale		UTI=org.tempel.openlingua.rbl	#tag EndFileType#tag EndFileTypeSet

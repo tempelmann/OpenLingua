@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>REAL Studio Locale</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.tempel.openlingua.rbl</string>
+			<key>UTTypeReferenceURL</key>
+			<string>http://github.com/tempelmann/OpenLingua</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>rbl</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>OpenLingua</string>
+	<key>CFBundleName</key>
+	<string>OpenLingua</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.tempel.openlingua</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.0.0.0</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>OLgu</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
+	<key>CFBundleShortVersionString</key>
+	<string></string>
+	<key>CFBundleIconFile</key>
+	<string>OpenLingua.icns</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.4.0</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>REALbasic Locale</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>RbLc</string>
+			</array>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>rbl</string>
+			</array>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>org.tempel.openlingua.rbl</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+		</dict>
+	</array>
+</dict>
+</plist>

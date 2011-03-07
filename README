@@ -1,2 +1,26 @@
-This is a clone of REAL Software's Lingua application for localizing REALbasic apps.
-Requires REAL Studio.
+This is a clone of REAL Software's Lingua application for localizing
+REALbasic apps. Requires REAL Studio.
+
+
+Build instructions
+===================
+
+Mac
+----
+
+When building for Mac OS X, the contents of "Info-addon.plist" in the
+Resources folder need to be merged into the build Info.plist file, or
+otherwise OpenLingua.app won't be recognited by the Finder to be able to
+open .rbl files. To do this merge, open both plist files in a text
+editor and copy the <key> and <array> structures into the same level of
+the Info.plist file. After that, touch the bundle (.app) folder so that
+the Finder takes a new peek at the Info.plist. After that, a right-click
+on a .rbl file should offer OpenLingua in the "Open With" submenu even
+on a Mac where OpenLingua has never been installed on before.
+
+Cocoa vs. Carbon
+-----------------
+
+As of the IDE 2011r1, Cocoa support is still incomplete. If you do not
+need special Cocoa features such as VoiceOver support, I suggest to
+build for Carbon therefore.
