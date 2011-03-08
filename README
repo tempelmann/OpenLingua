@@ -21,6 +21,6 @@ on a Mac where OpenLingua has never been installed on before.
 Cocoa vs. Carbon
 -----------------
 
-As of the IDE 2011r1, Cocoa support is still incomplete. If you do not
-need special Cocoa features such as VoiceOver support, I suggest to
-build for Carbon therefore.
+As of the IDE version 2011r1, Cocoa support is still incomplete. If you
+do not need special Cocoa features such as VoiceOver support, I suggest
+to build for Carbon therefore.
