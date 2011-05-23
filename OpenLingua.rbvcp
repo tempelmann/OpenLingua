@@ -1,5 +1,5 @@
 Type=Desktop
-RBProjectVersion=2011.01
+RBProjectVersion=2011.011
 Folder=OpenLingua Classes;OpenLingua Classes;&h3CB8D5CB;&h0;false
 Class=App;OpenLingua Classes/App.rbbas;&h4B0808A5;&h3CB8D5CB;false
 BuildSteps=Build Automation;OpenLingua Classes/Build Automation.rbbas;&h26FA8E00;&h3CB8D5CB;false
@@ -91,7 +91,7 @@ AppMenuBar=MenuBar1
 MajorVersion=1
 MinorVersion=0
 SubVersion=0
-NonRelease=6
+NonRelease=7
 Release=0
 InfoVersion=
 LongVersion=

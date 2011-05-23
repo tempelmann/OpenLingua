@@ -1123,8 +1123,19 @@ End
 		    elseif ch = "/" and txt.Mid(pos,1) = "*" then
 		      // Start of comment -> skip to the end of it
 		      // I make the assumption that the next "*/" ends the comment.
-		      // Not sure if that's alwayss correct, though (what if it's in quotes?)
+		      // Not sure if that's always correct, though (what if it's in quotes?)
 		      pos = txt.InStr(pos+1, "*/") + 2
+		    elseif ch = "/" and txt.Mid(pos,1) = "/" then
+		      // Start of comment -> skip to the end of it, which is the end of the line.
+		      dim p1 as integer = txt.InStr(pos, Chr(10))
+		      dim p2 as integer = txt.InStr(pos, Chr(13))
+		      if p1 > pos and p1 < p2 then
+		        pos = p1+1
+		      elseif p2 > pos then
+		        pos = p2+1
+		      else
+		        pos = txt.Len
+		      end
 		    elseif ch = """" and (state = 0 or state = 2) then
 		      // Start of a string -> find end of it
 		      dim s as String
@@ -1171,7 +1182,7 @@ End
 		    else
 		      break
 		      beep
-		      MsgBox "Syntax error at pos "+Str(pos)+": "+txt.Mid(pos-1,10)
+		      MsgBox "Syntax error at pos "+Str(pos)+": "+txt.Mid(pos-1,10).ConvertEncoding(Encodings.UTF8)
 		      return false
 		    end
 		  wend
