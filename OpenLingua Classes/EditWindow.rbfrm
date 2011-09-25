@@ -1106,6 +1106,9 @@ End
 		  #if DebugBuild
 		    // need to convert to UTF-8, at least for debugging, or the darn debugger will crash on me (OSX, RB 2011r1)
 		    txt = txt.ConvertEncoding (Encodings.UTF8)
+		  #else
+		    // oddly - I get errorneous results with UTF16BE strings down there as well, e.g. getting 0-chars occasionally
+		    txt = txt.ConvertEncoding (Encodings.UTF8)
 		  #endif
 		  
 		  // Now parse the text.
