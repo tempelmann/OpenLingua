@@ -46,7 +46,6 @@ Begin Window EditWindow Implements Undoable
       Selectable      =   False
       TabIndex        =   0
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   "Filter:"
       TextAlign       =   0
       TextColor       =   0
@@ -262,7 +261,6 @@ Begin Window EditWindow Implements Undoable
       Selectable      =   False
       TabIndex        =   7
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   "Name:"
       TextAlign       =   0
       TextColor       =   0
@@ -297,7 +295,6 @@ Begin Window EditWindow Implements Undoable
       Selectable      =   False
       TabIndex        =   8
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   "..."
       TextAlign       =   0
       TextColor       =   0
@@ -332,7 +329,6 @@ Begin Window EditWindow Implements Undoable
       Selectable      =   False
       TabIndex        =   9
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   "Original:"
       TextAlign       =   0
       TextColor       =   0
@@ -579,7 +575,6 @@ Begin Window EditWindow Implements Undoable
       Selectable      =   False
       TabIndex        =   12
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   """^0"" translation:"
       TextAlign       =   0
       TextColor       =   0
@@ -676,7 +671,6 @@ Begin Window EditWindow Implements Undoable
       Selectable      =   False
       TabIndex        =   15
       TabPanelIndex   =   0
-      TabStop         =   True
       Text            =   ""
       TextAlign       =   0
       TextColor       =   &h000000
@@ -1202,7 +1196,10 @@ End
 
 	#tag Method, Flags = &h21
 		Private Sub listMove(forward as Boolean)
+		  dim f as RectControl = self.Focus
+		  ClearFocus // this ensures that a just-entered translation gets saved
 		  itemList.MoveSelection forward
+		  f.SetFocus // this restores the focus
 		End Sub
 	#tag EndMethod
 
@@ -1356,7 +1353,7 @@ End
 
 	#tag Method, Flags = &h21
 		Private Function save() As Boolean
-		  ClearFocus
+		  ClearFocus // this ensures that a just-entered translation gets saved
 		  if RBLPool.SaveToRBL () then
 		    updateStatus
 		    return true
