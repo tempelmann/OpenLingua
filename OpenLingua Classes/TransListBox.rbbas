@@ -177,7 +177,7 @@ Inherits PersistentListBox
 		  // with the default entries and their platform dependent values
 		  // collected in a single node each.
 		  
-		  dim totalCount, missingCount as Integer
+		  dim totalCount, missingCount, missingWords as Integer
 		  
 		  for each rec as LinguaFileRecord in mLTP.RawRecords.AllItems
 		    if rec.Value.Type = Variant.TypeObject and rec.Value.ObjectValue isA LinguaRecordSet then
@@ -195,12 +195,13 @@ Inherits PersistentListBox
 		      totalCount = totalCount + 1
 		      if grp.Translation = "" then
 		        missingCount = missingCount + 1
+		        missingWords = missingWords + Ubound(grp.Original.Split(" ")) + 1
 		      end if
 		    end if
 		  next
 		  
 		  if mInfoLbl <> nil then
-		    mInfoLbl.Text = Str(totalCount)+" total, "+Str(missingCount)+" pending"
+		    mInfoLbl.Text = Str(totalCount)+" total, "+Str(missingCount)+" pending ("+Str(missingWords)+" words)"
 		  end if
 		End Sub
 	#tag EndMethod
@@ -707,11 +708,6 @@ Inherits PersistentListBox
 			Group="Position"
 			Type="Boolean"
 			InheritedFrom="ListBox"
-		#tag EndViewProperty
-		#tag ViewProperty
-			Name="mIgnoreChangeEvents"
-			Group="Behavior"
-			Type="Boolean"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="Name"
