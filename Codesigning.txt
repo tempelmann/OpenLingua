@@ -1,0 +1,3 @@
+codesign -f -s "Developer ID Application: Thomas Tempelmann" OpenLingua.app/Contents/Frameworks/*.dylib
+codesign -f -s "Developer ID Application: Thomas Tempelmann" OpenLingua.app
+spctl --verbose=4 --assess --type execute OpenLingua.app

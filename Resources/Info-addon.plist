@@ -10,7 +10,7 @@
 				<string>public.data</string>
 			</array>
 			<key>UTTypeDescription</key>
-			<string>REAL Studio Locale</string>
+			<string>Xojo Locale</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.tempel.openlingua.rbl</string>
 			<key>UTTypeReferenceURL</key>
@@ -20,6 +20,7 @@
 				<key>public.filename-extension</key>
 				<array>
 					<string>rbl</string>
+					<string>xojo_locale</string>
 				</array>
 			</dict>
 		</dict>
